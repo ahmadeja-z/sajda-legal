@@ -1,0 +1,503 @@
+/* Sajda Legal Website — shared styles
+   Colors match the Sajda app's own theme (lib/theme/sajda_colors.dart) */
+
+:root {
+  --color-bg: #071d32;
+  --color-bg-secondary: #0c2944;
+  --color-surface: #123654;
+  --color-surface-elevated: #1b4468;
+  --color-border: #24445f;
+
+  --color-primary: #087af5;
+  --color-primary-light: #4da3ff;
+  --color-primary-dark: #0560c4;
+
+  --color-gold: #d6ad69;
+  --color-gold-light: #e6c793;
+  --color-gold-dark: #b98f4c;
+
+  --color-text: #ffffff;
+  --color-text-secondary: #b8c9da;
+  --color-text-muted: #829bb1;
+
+  --max-width: 900px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background: radial-gradient(
+      1200px 600px at 50% -10%,
+      var(--color-bg-secondary) 0%,
+      var(--color-bg) 55%
+    ),
+    var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+/* Header / nav */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(7, 29, 50, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .brand-mark {
+    height: 32px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--color-text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+  text-decoration: none;
+  background: var(--color-surface);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-bg);
+  background: var(--color-gold);
+}
+
+.nav-links a[aria-current="page"]:hover {
+  background: var(--color-gold-light);
+}
+
+/* Page shell */
+main {
+  display: block;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.page-narrow {
+  max-width: 760px;
+}
+
+/* Hero (home page) */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 24px 32px;
+  text-align: center;
+}
+
+.hero-geo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 28px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .hero-geo {
+    max-width: 200px;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+}
+
+.hero .subtitle {
+  color: var(--color-gold-light);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero p.lead {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 680px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: linear-gradient(
+    165deg,
+    var(--color-surface) 0%,
+    var(--color-bg-secondary) 100%
+  );
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  margin-bottom: 4px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.card .card-link {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--color-gold-light);
+}
+
+.card .card-link::after {
+  content: " →";
+}
+
+/* Legal document content */
+.legal-header {
+  margin-bottom: 40px;
+}
+
+.legal-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.legal-updated {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.legal-intro {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  margin-top: 16px;
+}
+
+.notice {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin: 24px 0;
+  color: var(--color-text-secondary);
+  font-size: 0.97rem;
+}
+
+.notice strong {
+  color: var(--color-gold-light);
+}
+
+section.legal-section {
+  margin: 36px 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+section.legal-section:first-of-type {
+  border-top: none;
+}
+
+.legal-section h2 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.legal-section h3 {
+  font-size: 1.05rem;
+  margin: 20px 0 8px;
+  color: var(--color-gold-light);
+}
+
+.legal-section p {
+  color: var(--color-text-secondary);
+  margin: 0 0 14px;
+}
+
+.legal-section ul {
+  color: var(--color-text-secondary);
+  padding-left: 22px;
+  margin: 0 0 14px;
+}
+
+.legal-section li {
+  margin-bottom: 8px;
+}
+
+.legal-section strong {
+  color: var(--color-text);
+}
+
+/* Steps list (account deletion) */
+.steps {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 16px 20px 16px 56px;
+  margin-bottom: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps strong {
+  color: var(--color-text);
+}
+
+.dont-list {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.dont-list p {
+  margin: 0 0 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.97rem;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: var(--color-gold-light);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+  background: var(--color-surface);
+  border-color: var(--color-gold-dark);
+}
+
+/* Contact card — subtle, non-alert highlight for an inline contact detail */
+.contact-card {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin: 4px 0 20px;
+}
+
+code,
+.email {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--color-gold-light);
+  font-size: 0.95em;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--color-text-secondary);
+}
+
+.site-footer .footer-brand {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 6px;
+}

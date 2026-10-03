@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajda Privacy Policy</title>
+  <meta name="description" content="Sajda Privacy Policy — how the Sajda Islamic Application collects, uses, and protects your information.">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../">
+        <img class="brand-mark" src="../assets/sajda_app_branding_logo.png" alt="Sajda" width="1448" height="1086">
+      </a>
+      <ul class="nav-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../privacy/" aria-current="page">Privacy Policy</a></li>
+        <li><a href="../delete-account/">Account Deletion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="page page-narrow">
+      <header class="legal-header">
+        <h1>Sajda Privacy Policy</h1>
+        <p class="legal-updated">Last updated: October 3, 2026</p>
+        <p class="legal-intro">
+          This Privacy Policy explains what information the Sajda Islamic Application
+          ("Sajda," "the app," "we," "us") collects, why, and how it is used. It covers
+          the app's features, including Qaza-e-Umri tracking, prayer times, Azan
+          reminders, the Quran reader, Qibla direction, Tasbih, Duas, and Hadith content.
+        </p>
+      </header>
+
+      <section class="legal-section">
+        <h2>1. Introduction</h2>
+        <p>
+          We respect your privacy and are committed to being transparent about the
+          information Sajda collects and how it is used. This policy applies to anyone
+          who uses the Sajda mobile application.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Information We Collect</h2>
+        <p>Depending on how you use the app, we may collect the following:</p>
+
+        <h3>Authentication Information</h3>
+        <p>
+          If you create an account, we collect your email address, a display name or
+          username, and, for email-based sign-up, a phone number. If you sign in with
+          Google, we receive the basic profile information Google provides for sign-in,
+          such as your name, email address, and profile photo. Accounts are managed
+          through Firebase Authentication.
+        </p>
+
+        <h3>Prayer and App Activity Data</h3>
+        <p>
+          We collect the prayer and Qaza-e-Umri (missed-prayer) tracking entries you
+          record in the app, so your progress is saved and can be shown back to you
+          across sessions and devices.
+        </p>
+
+        <h3>Location Permission</h3>
+        <p>
+          With your permission, Sajda reads your device's foreground location to
+          calculate local prayer times and to determine the Qibla direction for your
+          chosen calculation method. This is a device permission used to provide
+          functionality — based on the app's current implementation, your location is
+          used on your device for these calculations and is not written to our
+          backend database. Sajda does not request or use background location access.
+        </p>
+
+        <h3>Camera Permission</h3>
+        <p>
+          Sajda may request camera access only while the Qibla screen's optional
+          live camera (AR) view is open, to overlay the Qibla direction on the camera
+          preview. The camera feed is used locally for this overlay and is not
+          recorded or uploaded. If you prefer not to grant camera access, the
+          compass-only Qibla view remains available.
+        </p>
+
+        <h3>Notifications</h3>
+        <p>
+          Sajda uses a push-notification token (via Firebase Cloud Messaging) and the
+          device's local notification scheduler to deliver prayer-time and Azan
+          reminders. You can enable or disable individual prayer reminders in the
+          app's Azan settings.
+        </p>
+
+        <h3>Quran and Prayer Progress</h3>
+        <p>
+          Your prayer and Qaza/Qasar tracking data is stored in Firebase Cloud
+          Firestore so it syncs across your sessions and devices. Quran content you
+          read (translations, tafsir, recitation audio) is cached locally on your
+          device to reduce repeated downloads; recitation audio is currently
+          streamed rather than saved for offline playback.
+        </p>
+
+        <h3>Local Device Storage</h3>
+        <p>
+          Some preferences, such as your selected language and notification
+          settings, are stored locally on your device rather than on our servers.
+        </p>
+
+        <h3>Support Messages</h3>
+        <p>
+          If you contact us through the app's Suggestions or Contact Us feature, we
+          collect the name, email, subject, and message text you submit, so we can
+          respond to you.
+        </p>
+
+        <h3>Analytics</h3>
+        <p>
+          Sajda does not currently use any analytics or crash-reporting SDK, and no
+          advertising SDK is active. The app does not collect usage analytics or
+          serve ads at this time.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. How We Use Information</h2>
+        <ul>
+          <li>To create and maintain your account and sign you in.</li>
+          <li>To calculate your prayer times and Qibla direction for your location.</li>
+          <li>To save and display your prayer and Qaza tracking progress across sessions.</li>
+          <li>To deliver prayer-time and Qaza reminder notifications.</li>
+          <li>To respond to suggestions and support messages you send us.</li>
+          <li>To operate the app's core Islamic-content features (Quran, Duas, Hadith, Tasbih).</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Third-Party Services</h2>
+        <p>Sajda relies on the following third-party services to operate:</p>
+        <ul>
+          <li><strong>Firebase Authentication</strong> — manages account sign-in (email/password and Google Sign-In).</li>
+          <li><strong>Google Cloud Firestore</strong> — stores account, tracking, and support-message data.</li>
+          <li><strong>Firebase Cloud Messaging</strong> — delivers push notifications to your device.</li>
+          <li><strong>Google Sign-In</strong> — an optional sign-in method.</li>
+          <li>
+            <strong>Quran content providers</strong> (such as the Al Quran Cloud API, the
+            Tanzil Uthmani mushaf text, audio/CDN partners including islamic.network
+            and mp3quran.net, and the tafsir_api project via jsDelivr) — deliver
+            Quran text, translations, tafsir, and recitation audio. These are
+            standard content-download requests; Sajda does not send your account
+            or profile data to these providers.
+          </li>
+        </ul>
+        <p>
+          Each provider processes data under its own privacy policy, which we
+          encourage you to review if you have concerns about a specific provider.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Data Retention</h2>
+        <p>
+          We retain your account and tracking data for as long as your account
+          remains active, so your prayer and Qaza progress persists across sessions
+          and devices. Support messages are retained to allow us to review and
+          respond to them.
+        </p>
+        <div class="notice">
+          <strong>Note:</strong> A specific retention period for data kept after
+          account deletion has not yet been finalized. We will update this section
+          once a defined retention period is confirmed.
+        </div>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Data Security</h2>
+        <p>
+          Account and tracking data is stored using Firebase's infrastructure,
+          including Firebase Authentication and Cloud Firestore's built-in
+          transport encryption. No method of storage or transmission is completely
+          secure, and we cannot guarantee absolute security.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Account and Data Deletion</h2>
+        <p>
+          You can request deletion of your Sajda account and associated data at
+          any time. See the
+          <a href="../delete-account/">Account Deletion</a> page for instructions.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Children's Privacy</h2>
+        <p>
+          Sajda is an Islamic application designed to support prayer, Qur'an
+          reading, Qibla direction, Islamic learning, and other faith-based
+          activities. The application may be used by individuals and families,
+          including younger users under the guidance of a parent or legal
+          guardian.
+        </p>
+        <p>
+          Sajda does not intentionally collect personal information from
+          children beyond what is necessary to provide the application's
+          features. Features that involve creating an account, saving personal
+          progress, prayer history, or synchronizing data should be used by
+          children with the knowledge and supervision of a parent or guardian
+          where required by applicable law.
+        </p>
+        <p>Sajda does not contain advertising targeted at children.</p>
+        <p>
+          If a parent or guardian believes that a child has provided personal
+          information through Sajda without appropriate consent, they may
+          contact us at:
+        </p>
+        <div class="contact-card">
+          <a class="email" href="mailto:ahmadejaz2446@gmail.com">ahmadejaz2446@gmail.com</a>
+        </div>
+        <p>
+          We will review the request and take appropriate steps regarding the
+          child's account and associated personal information.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy as the app changes. Material changes
+          will be reflected with an updated "Last updated" date at the top of this
+          page.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. Contact Us</h2>
+        <p>
+          If you have questions about this Privacy Policy or how your data is
+          handled, please contact us at:
+        </p>
+        <p><a class="email" href="mailto:ahmadejaz2446@gmail.com">ahmadejaz2446@gmail.com</a></p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Sajda</div>
+    <p>&copy; 2026 Sajda. This site provides privacy and account information for the Sajda Islamic Application.</p>
+  </footer>
+</body>
+</html>
